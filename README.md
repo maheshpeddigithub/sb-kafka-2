@@ -17,4 +17,4 @@ $KAFKA_HOME/bin/kafka-server-stop.sh $KAFKA_HOME/config/server.properties <br>
 $KAFKA_HOME/bin/zookeeper-server-stop.sh stop $KAFKA_HOME/config/zookeeper.properties <br>
 
 
-CURL command to post message: curl -X POST http://localhost:8080/send?message=Hello_Kafka <br>
+CURL command to post message: curl -i -H "Content-Type: application/json" -H "Accept: application/json" --data '{"id": 100, "title":"title1"}' -X POST http://localhost:8080/api/publish <br>
